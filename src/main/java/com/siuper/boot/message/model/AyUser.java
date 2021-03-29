@@ -1,15 +1,26 @@
 package com.siuper.boot.message.model;
 
-public class AyUser {
-    private String id;
+import javax.persistence.*;
+import java.io.Serializable;
+
+
+@Entity
+@Table(name = "ay_user")
+public class AyUser implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+
     private String name;
+
     private String password;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
