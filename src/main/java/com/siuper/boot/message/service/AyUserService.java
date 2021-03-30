@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.List;
 
 public interface AyUserService {
+
     AyUser findById(int id);
 
     List<AyUser> findAll();
